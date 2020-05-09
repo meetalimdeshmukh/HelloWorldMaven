@@ -14,14 +14,19 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
+  </distributionManagement-->
 <distributionManagement>
-       <repository>
-         <id>internal.repo</id>
-         <name>Internal repo</name>
-         <url>file:///usr/local/svn-builds/myartifacts/</url>
-         <url>file:///var/lib/jenkins/myartifacts/</url>
-       </repository>
-  </distributionManagement>
+  <repository>
+    <id>releases</id>
+    <!-- CHANGE HERE by your team nexus server -->
+    <url>http://18.222.194.128:8081/repository/maven-releases/</url>
+  </repository>
+  <snapshotRepository>
+    <id>snapshots</id>
+    <!-- CHANGE HERE by your team nexus server -->
+    <url>http://18.222.194.128:8081/repository/maven-snapshots/</url>
+  </snapshotRepository>
+</distributionManagement>
 
   <dependencies>
     <dependency>
